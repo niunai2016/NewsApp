@@ -60,7 +60,7 @@
   ```json
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack --watch"
   }
   ```
   现在执行 `npm run build` 相当于 `webpack`, `npm run start` 相当于 `webpack-dev-server`.
@@ -100,7 +100,7 @@
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015','react']
         }
